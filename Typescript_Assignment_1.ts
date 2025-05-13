@@ -11,15 +11,11 @@
     const filteredItems = items.filter((item : {title : String; rating : number}) => item.rating >= 4);
     return filteredItems;
   }
-  const books = [
-  { title: "Book A", rating: 4.5 },
-  { title: "Book B", rating: 3.2 },
-  { title: "Book B", rating: 4.00 },
-  { title: "Book C", rating: 5.0 }
-];
 
-const result = filterByRating(books);
-console.log(result);
-
-// Output: [ { title: "Book A", rating: 4.5 }, { title: "Book C", rating: 5.0 } ]
+  function concatenateArrays<T>(...arrays: T[][]): T[]{
+    const concatedArray = arrays.reduce((newArray : T[], currArray : T[]) => newArray.concat(currArray), []);
+    return concatedArray;
+  }
+  
+  
 }
