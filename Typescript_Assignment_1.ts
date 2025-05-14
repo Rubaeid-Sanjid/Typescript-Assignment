@@ -50,4 +50,16 @@
     }
   }
 
+  interface Product {
+    name: string;
+    price: number;
+  }
+
+  function getMostExpensiveProduct(products: Product[]): Product | null{
+    const productPrices = products.map(product => product.price);
+    const maxPrice = Math.max(...productPrices);
+    const expensiveProduct = products.find(product => product.price === maxPrice) || null;
+    return expensiveProduct;
+  }
+  
 }
