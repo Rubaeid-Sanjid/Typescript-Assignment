@@ -61,5 +61,38 @@
     const expensiveProduct = products.find(product => product.price === maxPrice) || null;
     return expensiveProduct;
   }
-  
+
+  enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+  }
+
+  function getDayType(day: Day): string{
+    switch(day){
+      case Day.Saturday:
+        return "Weekend";
+      case Day.Sunday:
+        return "Weekend";
+      default:
+        return "Weekday"
+    }
+  }
+
+  async function squareAsync(n: number): Promise<number>{
+    return new Promise((resolve, reject)=>{
+      setTimeout(()=>{
+        if(n >= 0){
+          resolve(n * n);
+        }
+        else{
+          reject("Error: Negative number not allowed");
+        }
+      }, 1000)
+    })
+  }
 }
