@@ -1,3 +1,5 @@
+# Typescript Technocrat
+
 Hello everyone, recently I have explored TypeScript and I want to share about some simple topic of typescript that I have learned. We all know that right now TypeScript is a powerful language that helps us to write better JavaScript with types. Today I am going to share about two important topics of Typescript that usually people get asked in interview.
 
 ## 1. Differences between Interfaces and Types in TypeScript
